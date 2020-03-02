@@ -3,25 +3,7 @@ body{
   margin-left: 25vw;;
 }
 
-#mainTitle {
-    text-align: center;
-}
-
-#test p{
-  text-align: center;
-}
-
-#test2{
-  display: none;
-}
-
-#testTableau{
-    border-collapse: separate;
-    border-spacing: 50px 0px;
-    width: 100%;
-}
-
-#testTableau input{
+input{
   width: 100%;
   margin: 8px 0;
   display: inline-block;
@@ -37,13 +19,9 @@ body{
   padding-bottom: 12px;
 }
 
-#testTableau td{
-  vertical-align: baseline;
-}
-
-#btn-play, .btn-formulaires{
-  margin-left: 45%;
-  width:5rem;
+.btn-formulaires{
+  width: auto;
+  margin-left: 0;
   background-color: #78e08f;
   border : none;
   color : #FFF;
@@ -59,12 +37,7 @@ body{
   cursor: pointer;
 }
 
-.btn-formulaires{
-  width: auto;
-  margin-left: 0;
-}
-
-#btn-play:hover, .btn-formulaires:hover{
+.btn-formulaires:hover{
   background-color: #82ccdd;
   transition: background-color 1s ease;
 }
