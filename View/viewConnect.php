@@ -6,14 +6,14 @@
   </head>
   <body>
     <h1>Se connecter</h1>
-    <form class="formConnect" action="index.html" method="post">
+    <form class="formConnect" action="viewGames.php" method="post">
       <label for="login">Login : </label>
       <input type="text" name="login" value="" required>
       <br>
       <label for="psswrd">Mot de passe : </label>
-      <input type="text" name="psswrd" value="" required>
+      <input type="password" name="psswrd" value="" required>
       <br>
-      <button type="button" name="button">Se Connecter</button>
+      <button type="submit" name="button">Se Connecter</button>
     </form>
   </body>
 </html>
