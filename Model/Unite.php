@@ -21,7 +21,7 @@ abstract class Unite{
   }
 
   public function getTempsDeploiement(){
-    return $this->$_vitesseDeplacement;
+    return $this->_vitesseDeplacement;
   }
 
   public function setTempsDeploiement($vitesse){
@@ -29,19 +29,19 @@ abstract class Unite{
       trigger_error('La vitesse doit être un nombre entier', E_USER_WARNING);
       return;
     }
-    $this->$_vitesseDeplacement = $vitesse;
+    $this->_vitesseDeplacement = $vitesse;
   }
 
   public function getType(){
-    return $this->$_type;
+    return $this->_type;
   }
 
   public function setType(TypesUnite $type){
-    $this->$_type = $type;
+    $this->_type = $type;
   }
 
   public function getOccupe(){
-    return $this->$_occupe;
+    return $this->_occupe;
   }
 
   public function setOccupe($bool){
@@ -49,19 +49,19 @@ abstract class Unite{
       trigger_error('boolean requis', E_USER_WARNING);
       return;
     }
-    $this->$_occupe = $bool;
+    $this->_occupe = $bool;
   }
 
   public function getAttribue(){
-    return $this->$_attribue;
+    return $this->_attribue;
   }
 
-  public function setOccupe($bool){
+  public function setAttribue($bool){
     if (!is_bool($bool)) {
       trigger_error('boolean requis', E_USER_WARNING);
       return;
     }
-    $this->$_attribue = $bool;
+    $this->_attribue = $bool;
   }
 }
 
