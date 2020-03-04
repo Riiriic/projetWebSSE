@@ -26,5 +26,5 @@ abstract class Enum
         $rf = new \ReflectionClass(get_called_class());
         return $rf->getConstants();
     }
-
+}
 ?>
