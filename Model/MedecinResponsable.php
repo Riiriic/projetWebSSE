@@ -23,7 +23,7 @@ class MedecinResponsable extends Utilisateur{
     $this->_vt=$vt;
   }
 
-  public function setVt(Personnel $_perso){
+  public function setPerso(Personnel $perso){
     $this->_perso=$perso;
   }
 }
