@@ -18,7 +18,7 @@ class Victime{
     $this->_etat=$etat;
     $this->_priseCharge=false;
     $this->_sante=100;
-    $this->_symptomes=;
+    $this->_symptomes=NULL;
     $this->_nom=NULL;
     $this->_categorie=$cat;
     $this->_sauve=false;
@@ -110,6 +110,10 @@ class Victime{
       return;
     }
     $this->_sauve = $sauve;
+  }
+
+  public function setSymptomes($symp){
+    $this->_symptomes=$symp;
   }
 }
 ?>
