@@ -5,10 +5,8 @@ class CommandantOperations extends Utilisateur{
   private Personnel $_perso;
   private Vehicule $_vehicule;
 
-  public function __construct($login, $mdp, $mail, Personnel $perso, Vehicule $vehicule){
+  public function __construct($login, Personnel $perso, Vehicule $vehicule){
     $this->_login=$login;
-    $this->_mdp=$mdp;
-    $this->_mail=$mail;
     $this->_perso=$perso;
     $this->_vehicule=$vehicule;
   }

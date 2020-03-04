@@ -5,10 +5,8 @@ class MedecinResponsable extends Utilisateur{
   private VehiculeTransport $_vt;
   private Personnel $_perso;
 
-  public function __construct($login, $mdp, $mail, VehiculeTransport $vt, Personnel $_perso){
+  public function __construct($login, VehiculeTransport $vt, Personnel $perso){
     $this->_login=$login;
-    $this->_mdp=$mdp;
-    $this->_mail=$mail;
     $this->_vt=$vt;
     $this->_perso=$perso;
   }
