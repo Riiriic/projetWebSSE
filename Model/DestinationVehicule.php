@@ -5,7 +5,8 @@ class DestinationVehicule
 {
     protected $_distance;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->_distance=NULL;
     }
 
