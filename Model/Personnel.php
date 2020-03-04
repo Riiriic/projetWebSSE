@@ -10,7 +10,7 @@ class Personnel{
     }
 
     public function setTypePersonnel($typePersonnel){
-        $this->_typePersonnel-$typePersonnel;
+        $this->_typePersonnel=$typePersonnel;
     }
 
     public function getForceTravail(){
