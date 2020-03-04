@@ -2,7 +2,7 @@
 namespace ProjetWeb;
 
 abstract class Utilisateur{
-  private $_login;
+  protected $_login;
   private $_mdp;
   private $_mail;
 
