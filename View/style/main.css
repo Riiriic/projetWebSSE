@@ -21,6 +21,14 @@ body{
     width: 100%;
 }
 
+.tabPartie{
+    display: inline-block;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid grey;
+    border-radius: 0.5em;
+  }
+
 #testTableau input{
   width: 100%;
   margin: 8px 0;
