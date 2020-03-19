@@ -8,53 +8,51 @@
   </head>
   <body>
     <?php
-    include("./header.php");
     session_start();
-
     if(!isset($_SESSION['login'])){
-        header('Location: index.php');
+        header('Location: viewConnect.php');
         exit;
     }
-    ?>
-    <center>
-      <div id="listGames">
-    <?php
-    $parties = Simplexml_load_file('../bdd/parties.xml');
-    foreach($parties->partie as $partie)
-    {
-      echo "<table class=\"tabPartie\">
-      <thead>
-      <th colspan=\"2\">
-      Partie ".$partie['id']."
-      </th>
-      </thead><tbody>
-      ";
-      $participants = $partie->participants;
-      foreach($participants->participant as $participant)
+    else {
+      include("./header.php");
+      echo "<center>
+      <div id=\"listGames\">";
+      $parties = Simplexml_load_file('../bdd/parties.xml');
+      foreach($parties->partie as $partie)
       {
-        echo "<tr><td colspan=\"2\">".$participant."</td></tr>";
+        echo "<table class=\"tabPartie\">
+        <thead>
+        <th colspan=\"2\">
+        Partie ".$partie['id']."
+        </th>
+        </thead><tbody>
+        ";
+        $participants = $partie->participants;
+        foreach($participants->participant as $participant)
+        {
+          echo "<tr><td colspan=\"2\">".$participant."</td></tr>";
+        }
+        echo "<tr>
+        <td>
+        <button>Rejoindre</button>
+        </td>";
+        if($_SESSION['role'] == "maitreJeu")
+        {
+          echo "<td><button>
+          Supprimer
+          </button>
+          </td>";
+        }
+        echo " </tr>
+          </tbody></table>";
       }
-      echo "<tr>
-      <td>
-      <button>Rejoindre</button>
-      </td><td><button>
-      Supprimer
-      </button>
-      </td>
-      </tr>
-      </tbody></table>";
+      echo "      </div>
+            <div id=\"Créer une partie\">
+
+            </div>
+          </center>
+";
     }
-
-     ?>
-
-
-
-      </div>
-      <div id="Créer une partie">
-
-      </div>
-    </center>
-
-    </script>
+    ?>
   </body>
 </html>

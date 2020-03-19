@@ -3,8 +3,8 @@ body{
   margin-left: 25vw;;
 }
 
-input{
-  width: 100%;
+input, .selectRole{
+  width: 25%;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
