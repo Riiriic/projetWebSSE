@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php
-      include("../bdd/connexion.php");
+      include("../Controller/controllerSignUp.php");
     ?>
     <h1>S'inscrire</h1>
     <?php
@@ -17,48 +17,26 @@
       }
       else {
         if (isset($_POST['login']) && isset($_POST['passwrd']) && isset($_POST['mail']) && isset($_POST['passwrdConfirm']) && isset($_POST['role'])) {
-          $mdp = password_hash($_POST['passwrd'], PASSWORD_DEFAULT);
-          if(password_verify($_POST['passwrdConfirm'], $mdp))
+          if(is_string($_POST['passwrd']))
           {
-            try {
-
-              $stm = $dbh->prepare("INSERT INTO UTILISATEURS VALUES (:login, :mdp, :mail, :role)");
-              $stm->bindParam(':login', $login);
-              $login = $_POST['login'];
-              $stm->bindParam(':mdp', $mdp);
-              $mdp = $mdp;
-              $stm->bindParam(':mail', $mail);
-              $mail = $_POST['mail'];
-              $stm->bindParam(':role', $role);
-              $role = $_POST['role'];
-              $stm->execute();
-              header('Location: viewConnect.php');
-            } catch (Exception $e) {
-              echo $e->getMessage();
-            }
-
-          }
-          else {
-            echo "Les mots de passe ne correspondent pas.";
-          }
-        /*  $stm = $dbh->prepare("INSERT INTO UTILISATEURS VALUES (:login, :mdp, :mail, :role)");
-          $stm->bindParam(':login', $login);
-          $login = $_POST['login'];
-          if($stm->execute()>0)
-          {
-            $row = $stm->fetch();
-            echo $row[1];
-            if($row[1]!=$_POST['passwrd'])
+            $mdp = password_hash($_POST['passwrd'], PASSWORD_DEFAULT);
+            if(password_verify($_POST['passwrdConfirm'], $mdp))
             {
-              header('Location: viewConnect.php');
+              try {
+                createUser($mdp);
+                header('Location: viewConnect.php');
+              } catch (Exception $e) {
+                echo $e->getMessage();
+              }
+
             }
             else {
-              session_start();
-              $_SESSION['login'] = $row[0];
-              $_SESSION['role'] = $row[3];
-              header('Location: viewGames.php');
+              echo "Les mots de passe ne correspondent pas.";
             }
-          }*/
+          }
+          else {
+            echo "Le mot de passe doit contenir une lettre minimum.";
+          }
         }
       }
     ?>

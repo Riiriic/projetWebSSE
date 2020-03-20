@@ -15,9 +15,10 @@
     }
     else {
       include("./header.php");
+      include("../Controller/controllerGames.php");
+      $parties = getParties();
       echo "<center>
       <div id=\"listGames\">";
-      $parties = Simplexml_load_file('../bdd/parties.xml');
       foreach($parties->partie as $partie)
       {
         echo "<table class=\"tabPartie\">
