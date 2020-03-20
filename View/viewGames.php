@@ -33,15 +33,21 @@
         {
           echo "<tr><td colspan=\"2\">".$participant."</td></tr>";
         }
-        echo "<tr>
-        <td>
-        <button>Rejoindre</button>
-        </td>";
+
         if($_SESSION['role'] == "maitreJeu")
         {
-          echo "<td><button>
+          echo "<tr>
+          <td>
+          <button>Rejoindre</button>
+          </td><td><button>
           Supprimer
           </button>
+          </td>";
+        }
+        else {
+          echo "<tr>
+          <td colspan=\"2\">
+          <button>Rejoindre</button>
           </td>";
         }
         echo " </tr>

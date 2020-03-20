@@ -6,11 +6,11 @@ class ChefPompier extends Utilisateur{
   private VehiculeUrgence $vu;
   private Personnel $perso;
 
-  public function __construct(VehiculeUrgence $v, Personnel $p){
+  /*public function __construct(VehiculeUrgence $v, Personnel $p){
     $this->pma=NULL;
     $this->vu=$v;
     $this->perso=$p;
-  }
+  }*/
 
   public function getPma(){
     return $this->pma;

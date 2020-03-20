@@ -6,6 +6,11 @@ abstract class Utilisateur{
   private $_mdp;
   private $_mail;
 
+  public function __construct($login)
+  {
+    $this->_login = $login;
+  }
+
   public function getLogin(){
     return $this->_login;
   }
