@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="style/formulaires.css">
+    <link rel="stylesheet" href="./View/style/formulaires.css">
   </head>
   <body>
     <?php
-      include("../Controller/controllerConnect.php");
+      include("./Controller/controllerConnect.php");
       echo "<h1>Se Connecter</h1>";
 
       if(isset($_SESSION['login']))

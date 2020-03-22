@@ -2,12 +2,12 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./View/style/main.css">
     <title></title>
   </head>
   <body>
     <?php
-      include("../bdd/connexion.php");
+      include("./bdd/connexion.php");
       session_start();
      ?>
      <?php
@@ -40,10 +40,8 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
       <center>
-
-
-        <button type="button" name="buttonConnect" onclick="goConnect()" class="btn-formulaires">Se Connecter</button>
-        <button type="button" name="buttonSignUp" onclick="goRegister()" class="btn-formulaires">S'inscrire</button>
+        <a href="connect"><button type="button" name="buttonConnect" class="btn-formulaires">Se Connecter</button></a>
+        <a href="register"><button type="button" name="buttonSignUp" onclick="goRegister()" class="btn-formulaires">S'inscrire</button></a>
         <!--<button type="button" name="buttonPlay" id="btn-play" onclick="changeContent()">Jouer</button>-->
       </center>
     </div>

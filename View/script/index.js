@@ -32,7 +32,7 @@ function fade(element, content) {
 
 function goConnect()
 {
-  location.href="viewConnect.php";
+  location.href="/connect";
 }
 
 function goRegister()

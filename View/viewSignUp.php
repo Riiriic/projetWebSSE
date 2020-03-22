@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="style/formulaires.css">
+    <link rel="stylesheet" href="./View/style/formulaires.css">
   </head>
   <body>
     <?php
-      include("../Controller/controllerSignUp.php");
+      include("./Controller/controllerSignUp.php");
     ?>
     <h1>S'inscrire</h1>
     <?php
