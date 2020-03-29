@@ -9,19 +9,11 @@ class ControllerAccueil
   }
 
   public static function index() {
-    $vue = View::getInstance();
-    return $vue->render('Home');
+    return View::render('Home');
   }
 
-  public static function connect() {
-    $vue = View::getInstance();
-    return $vue->render('Connect');
-  }
 
-  public static function register() {
-    $vue = View::getInstance();
-    return $vue->render('SignUp');
-  }
+
 }
 
 ?>

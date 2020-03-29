@@ -5,16 +5,14 @@ class Partie
 {
     private $_id;
     private $_date;
-    private Accident $_accident;
+    private $_etat;
     private $_listeJoueurs;
-    //Joueur a debattre plus tard
 
-    public function __construct($id, $date, $participants){
+    public function __construct($id, $date, $etat){
         $this->_id=$id;
         $this->_date=date($date);
-        $this->_listeJoueurs = array();
-
-        $this->_accident=new Accident();
+        $this->_listeJoueurs =  array();
+        $this->_etat = $etat;
     }
 
     public function getDate(){
@@ -25,8 +23,19 @@ class Partie
         return $this->_id;
     }
 
-    public function setId($id){
-        $this->_id=$id;
+    public function addJoueur($joueur, $role)
+    {
+      $this->_listeJoueurs[$role] = $joueur;
+    }
+
+    public function getJoueurs()
+    {
+      return $this->_listeJoueurs;
+    }
+
+    public function getEtat()
+    {
+      return $this->_etat;
     }
 
 }

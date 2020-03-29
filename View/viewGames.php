@@ -3,63 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="./View/style/header.css">
+    <link rel="stylesheet" href="./View/style/main.css">
+
   </head>
   <body>
     <?php
-    session_start();
-    if(!isset($_SESSION['login'])){
-        header('Location: viewConnect.php');
-        exit;
-    }
-    else {
-      include("./header.php");
-      include("../Controller/controllerGames.php");
-      $parties = getParties();
-      echo "<center>
-      <div id=\"listGames\">";
-      foreach($parties->partie as $partie)
+      include("./View/header.php");
+      foreach($var['datas'] as $key => $game)
       {
-        echo "<table class=\"tabPartie\">
-        <thead>
-        <th colspan=\"2\">
-        Partie ".$partie['id']."
-        </th>
-        </thead><tbody>
-        ";
-        $participants = $partie->participants;
-        foreach($participants->participant as $participant)
+        echo "<table class=\"tabPartie\"><thead>
+        <tr>
+        <th colspan=\"2\">";
+        echo $game->getId();
+        echo"</th>
+        </tr>
+        </thead>";
+        echo "<tbody><tr>
+        <td colspan=\"2\">".count($game->getJoueurs())."/6
+        </td>
+        </tr><tr>
+        <td>
+        <button ";
+        if(in_array($_SESSION['login'],$game->getJoueurs()) || count($game->getJoueurs()) == 6 || $_SESSION['inGame'])
         {
-          echo "<tr><td colspan=\"2\">".$participant."</td></tr>";
+          echo "disabled";
         }
-
-        if($_SESSION['role'] == "maitreJeu")
+        echo ">Rejoindre</button></td>
+        <td><button ";
+        if(!in_array($_SESSION['login'], $game->getJoueurs()) || $game->getEtat() == "enCours")
         {
-          echo "<tr>
-          <td>
-          <button>Rejoindre</button>
-          </td><td><button>
-          Supprimer
-          </button>
-          </td>";
+          echo "disabled";
         }
-        else {
-          echo "<tr>
-          <td colspan=\"2\">
-          <button>Rejoindre</button>
-          </td>";
+        echo ">Quitter</button>
+        </td>
+        </tr>";
+        $i = 1;
+        foreach($game->getJoueurs() as $role => $player){
+          echo "<tr id=\"j".$i."\">
+          <td>";
+          echo $role;
+          echo "</td><td>".$player."
+          </td>
+          </tr>";
+          $i++;
         }
-        echo " </tr>
-          </tbody></table>";
+        echo "</tbody>
+        </table>";
       }
-      echo "      </div>
-            <div id=\"Créer une partie\">
-
-            </div>
-          </center>
-";
-    }
     ?>
   </body>
 </html>

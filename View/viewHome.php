@@ -8,32 +8,8 @@
   <body>
     <?php
       include("./bdd/connexion.php");
-      session_start();
      ?>
-     <?php
-       /*
-       if(isset($_POST['login']) && isset($_POST['passwrd']))
-       {
-         $stm = $dbh->prepare("SELECT * FROM UTILISATEURS WHERE LOGIN=:login");
-         $stm->bindParam(':login', $login);
-         $login = $_POST['login'];
-         if($stm->execute()>0)
-         {
-           $row = $stm->fetch();
-           echo $row[1];
-           if($row[1]!=$_POST['passwrd'])
-           {
-             header('Location: index.php');
-           }
-           else {
-             header('Location: viewGames.php');
-           }
-         }
-       }
-       else {
-         echo $_POST['passwrd'];
-       }*/
-      ?>
+
     <h1 id="mainTitle">Bienvenue sur la simulation du plan ORSEC NOVI</h1>
     <div id="test">
       <p>

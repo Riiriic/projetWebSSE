@@ -1,8 +1,11 @@
 <?php
 namespace projetWebSSE;
-  class SeriousGame{
 
-    private $_instance = null;
+include_once('./Model/Partie.php');
+
+class SeriousGame{
+
+    private static $_instance = null;
     private $_listeParties;
     private $_listeUtilisateurs;
 
@@ -12,56 +15,39 @@ namespace projetWebSSE;
       $this->_listeUtilisateurs = array();
     }
 
-    public function getInstance()
+    public static function getInstance()
     {
       if(is_null(self::$_instance))
       {
-        $this->_instance = new SeriousGame();
+        self::$_instance = new SeriousGame();
       }
 
-      return $this->_instance;
+      return self::$_instance;
     }
 
     public function fillListeUtilisateurs($utilisateurs)
     {
-      foreach($utilisateurs as $utilisateur)
-      {
-        switch ($utilisateur['role']) {
-          case 'chefPompier':
-            $player = new ChefPompier($utilisateur['login']);
-            break;
-          case 'maitreJeu':
-            $player = new MaiterDuJeu($utilisateur['login']);
-            break;
-          case 'commandantOperations':
-            $player = new CommandantOperations($utilisateur['login']);
-            break;
-          case 'crra':
-            $player = new CRRA($utilisateur['login']);
-            break;
-          case 'medecinRepartiteur':
-            $player = new MedecinRepartiteur($utilisateur['login']);
-            break;
-          case 'medecinTrieur':
-            $player = new MedecinTrieur($utilisateur['login']);
-            break;
-          default:
-            break;
-        }
-        $this->_listeUtilisateurs[$utilisateur['login']] = $player;
+      foreach ($utilisateurs as $utilisateur) {
+        array_push($this->_listeUtilisateurs, $utilisateur);
       }
     }
 
-    public function fillListeParties($parties)
+    public function fillListeParties($parties, $participe)
     {
-      $listeJoueurs = array();
-      foreach($parties->partie as $partie)
+      foreach($parties as $partie)
       {
-        foreach ($partie->participants as $participant) {
-          array_push($listeJoueurs, $this->_listeUtilisateurs[$participant]);
-        }
-        $p = new Partie($partie['id'], $partie->date, $listeJoueurs);
+        $p = new Partie($partie[0], $partie[1], $partie[2]);
+        $this->_listeParties[$partie[0]] = $p;
       }
+      foreach($participe as $duo)
+      {
+        echo $this->_listeParties[$duo[0]]->addJoueur($duo[1], $duo[2]);
+      }
+    }
+
+    public function getListeParties()
+    {
+      return $this->_listeParties;
     }
 
   }

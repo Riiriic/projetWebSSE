@@ -6,24 +6,16 @@
 
 class View
 {
-  private static $_instance = null;
 
-  private function __construct()
-  {
-  }
-
-  public static function getInstance()
-  {
-    if(is_null(self::$_instance))
-    {
-      self::$_instance = new View();
-    }
-    return self::$_instance;
-  }
-
-  public static function render($filename) {
+  public static function render($filename,$var=[]) {
     ob_start();
+    if(count($var))
+    {
+      extract($var);
+    }
     require "./View/view" . $filename . ".php";
+    $content = ob_get_clean();
+    return $content;
   }
 }
 
