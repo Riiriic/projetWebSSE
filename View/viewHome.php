@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./View/style/main.css">
+    <link rel="stylesheet" href="./View/style/formulaires.css">
     <title></title>
   </head>
   <body>

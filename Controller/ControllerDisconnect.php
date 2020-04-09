@@ -10,8 +10,8 @@ class ControllerDisconnect
 
   public function disconnect()
   {
-    unset($_SESSION['login']);
-    unset($_SESSION['inGame']);
+    session_unset();
+    session_destroy();
     return View::render('Disconnect');
   }
 

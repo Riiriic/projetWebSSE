@@ -50,6 +50,34 @@ class SeriousGame{
       return $this->_listeParties;
     }
 
+    public function getPartie($nom)
+    {
+      return $this->_listeParties[$nom];
+    }
+
+    public function getPartiesSauf($nom)
+    {
+      $res = [];
+      foreach($this->_listeParties as $partie)
+      {
+        if($partie->getId()!=$nom)
+        {
+          $res[$partie->getId()] = $partie;
+        }
+      }
+      return $res;
+    }
+
+    public function toJson(){
+      $test = [];
+      foreach($this->_listeParties as $partie)
+      {
+        $temp = $partie->toJson();
+        $test[] = $temp;
+      }
+      return $test;
+    }
+
   }
 
  ?>

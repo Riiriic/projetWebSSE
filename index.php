@@ -56,6 +56,24 @@
       'method' => 'GET',
       'controller' => 'ControllerDisconnect',
       'action' => 'disconnect'
+    ],
+    'joinGame' => [
+      'url' => '/projetwebsse/join',
+      'method' => 'POST',
+      'controller' => 'ControllerGames',
+      'action' => 'joinGame'
+    ],
+    'quitGame' => [
+      'url' => '/projetwebsse/quit',
+      'method' => 'POST',
+      'controller' => 'ControllerGames',
+      'action' => 'quitGame'
+    ],
+    'refresh' => [
+      'url' => "/projetwebsse/refresh",
+      'method' => 'GET',
+      'controller' => 'ControllerGames',
+      'action' => 'refresh'
     ]
   ];
 

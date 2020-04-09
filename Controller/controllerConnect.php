@@ -28,7 +28,6 @@
           }
           else {
             $_SESSION['login'] = $row[0];
-            $_SESSION['inGame'] = false;
             header('Location: /projetwebsse/games');
           }
         }

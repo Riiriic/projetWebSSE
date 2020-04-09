@@ -38,5 +38,16 @@ class Partie
       return $this->_etat;
     }
 
+    public function toJson()
+    {
+      $temp = [];
+      foreach($this->_listeJoueurs as $role => $value)
+      {
+        $temp[] = ["role" => $role, "login" =>$value];
+      }
+      $var = ["id" => $this->_id, "date" => $this->_date, "etat" => $this->_etat, "joueurs" => $temp];
+      return $var;
+    }
+
 }
 ?>

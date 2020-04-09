@@ -13,8 +13,7 @@
       echo $_SESSION['error'];
       unset($_SESSION['error']);
     }
-    else {
-      echo "<form class=\"formConnect\" action=\"\" class=\"formulaires\" method=\"post\">
+      echo "<form class=\"formConnect\" action=\"\" method=\"post\">
         <label for=\"login\">Login : </label>
         <br>
         <input type=\"text\" name=\"login\" value=\"\" required>
@@ -24,8 +23,8 @@
         <input type=\"password\" name=\"passwrd\" value=\"\" required>
         <br>
         <button type=\"submit\" name=\"button\" class=\"btn-formulaires\">Se Connecter</button>
-      </form>";
-    }
+      </form>
+      <a href=\"home\"><button class=\"btn-cancel\">Retour</button></a>";
      ?>
 
   </body>
