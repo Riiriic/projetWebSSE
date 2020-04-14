@@ -23,6 +23,6 @@
       </center>
     </div>
 
-    <script type="text/javascript" src="script/index.js"></script>
+    <!--<script type="text/javascript" src="script/index.js"></script>-->
   </body>
 </html>

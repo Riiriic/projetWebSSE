@@ -18,13 +18,13 @@
 
     public function test()
     {
-      if (isset($_POST['login']) && isset($_POST['passwrd'])) {
+      if(isset($_POST['login']) && isset($_POST['passwrd'])) {
         $row = $this->getUser($_POST['login']);
         if($row != -1)
         {
           if(!$this->testMdp($_POST['passwrd'], $row[1]))
           {
-            $error = "Le mot de passe ne correspond pas au login saisi.";
+            $_SESSION['error'] = "Le mot de passe ne correspond pas au login saisi.";
           }
           else {
             $_SESSION['login'] = $row[0];
@@ -32,7 +32,7 @@
           }
         }
         else {
-          $error = "Le login saisi n'existe pas.";
+          $_SESSION['error'] = "Le login saisi n'existe pas.";
         }
       }
       return View::render('Connect');

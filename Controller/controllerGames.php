@@ -158,9 +158,12 @@ include_once('./Model/SeriousGame.php');
         else {
           $availableRoles = array('chefPolice' => 'Chef de la Police', 'chefPompier' => 'Chef des Pompiers', 'chefSamu' => 'Médecin Responsable', 'crra' => 'CRRA', 'maitreJeu' => 'Maître du Jeu', 'medecinTrieur' => 'Médecin Trieur', 'medecinRepartiteur' => 'Médecin répartiteur');
           $takenRoles = self::getInfos();
-          foreach($takenRoles as $role)
+          if($takenRoles > 0)
           {
-            unset($availableRoles[$role]);
+            foreach($takenRoles as $role)
+            {
+              unset($availableRoles[$role]);
+            }
           }
           $id = $_POST['idGame'];
           $_SESSION['waitDecision'] = true;

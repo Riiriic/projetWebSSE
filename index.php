@@ -5,7 +5,7 @@
   require_once('./Controller/ControllerConnect.php');
   require_once('./Controller/ControllerSignUp.php');
   require_once('./Controller/ControllerGames.php');
-    require_once('./Controller/ControllerDisconnect.php');
+  require_once('./Controller/ControllerDisconnect.php');
   session_start();
 
   $routes = [
