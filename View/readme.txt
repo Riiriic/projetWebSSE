@@ -1,5 +1,5 @@
 fichier inetrface.php:interface.css:
-		   include("uxpin-pama.php");
+		   include("uxpin-pma.php");
 		   include("psycho.php");
 		   include("ua.php");
 		   include("ur.php");
