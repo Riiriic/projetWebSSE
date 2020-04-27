@@ -2,21 +2,21 @@ body { margin: 0;
        padding: 0;
      }
 #contient-elt
-   {
-     background-color:#ffffff;
+    {
+      background-color:#ffffff;
       border : 0.1em solid black;
-      width  : 80em;
-      height : 50em;
-      right:23%;
-      position:absolute;
-      bottom:70px;
-   }
-#map { 
+      width  : 80%;
+      height : 70%;
+    }
+#map {
       position: absolute;
-      top:35px; 
-      width: 70%;
-      height:75%;
-      margin:0 60px;
+      width: 100%;
+      height:100%;
+    }
+#image{
+       display: block;
+       max-width: 100%;
+       max-height: 100%;
      }
 #option
    {
@@ -134,8 +134,8 @@ body { margin: 0;
            height: 50px;
            position:absolute;
            left:370px;
-           bottom:30px;  
-         } 
+           bottom:30px;
+         }
 #pied-gauche
           {
            background-color:#000000;;
@@ -144,15 +144,15 @@ body { margin: 0;
            height: 50px;
            position:absolute;
            left:408px;
-           bottom:30px;  
-         } 
+           bottom:30px;
+         }
 #sphere1 {
     width: 10px;
     height: 20px;
     background: black;
     -webkit-border-radius: 10px / 20px;
-    -moz-border-radius:    10px / 20px; 
-     border-radius:        10px / 20px; 
+    -moz-border-radius:    10px / 20px;
+     border-radius:        10px / 20px;
     position:absolute;
     left:550px;
     bottom:90px;
@@ -162,8 +162,8 @@ body { margin: 0;
     height: 20px;
     background: black;
     -webkit-border-radius: 10px / 20px;
-    -moz-border-radius:    10px / 20px; 
-     border-radius:        10px / 20px; 
+    -moz-border-radius:    10px / 20px;
+     border-radius:        10px / 20px;
     position:absolute;
     left:575px;
     bottom:90px;
@@ -173,8 +173,8 @@ body { margin: 0;
     height: 20px;
     background: black;
     -webkit-border-radius: 10px / 20px;
-    -moz-border-radius:    10px / 20px; 
-    border-radius:        10px / 20px; 
+    -moz-border-radius:    10px / 20px;
+    border-radius:        10px / 20px;
     position:absolute;
     left:600px;
     bottom:90px;
@@ -198,7 +198,7 @@ body { margin: 0;
                height: 122px;
                position:absolute;
                right:220px;
-               top:12px;  
+               top:12px;
 }
 #diagonale-2{
                background-color:#000000;;
@@ -207,7 +207,7 @@ body { margin: 0;
                height: 122px;
                position:absolute;
                right:220px;
-               top:12px;  
+               top:12px;
 }
 h3
  {
