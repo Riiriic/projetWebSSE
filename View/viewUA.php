@@ -7,11 +7,16 @@
   </head>
   <body>
    <div id="elt">
-		 <div id= "morgue">
-			  <p>UA</p>
-			  <div id="ua"><p>UR</p></div>
-			  <div  id="ur"><p>Morgue</p></div>
-			  <div id="psycho"><p>Psycho</p></div>
+      <div id= "morgue">
+			  <p id="titre">UA</p>
+        <!--bouton pour aller à la page UR-->
+        <form action="viewUR.php" method="POST">
+        <input type="submit" value="UR" class="btn_UR"/>
+        </form>
+        <!-- bouton pour aller à la page Psycho-->
+			  <form action="viewPsycho.php" method="POST">
+        <input type="submit" value="Psycho" class="btn_Psy"/>
+        </form>
 			  <div id="tableau">
 				      <div id="icon-humain-1"></div><!--emplacement des bonhommes -->
 				      <div id="icon-humain-2"></div>

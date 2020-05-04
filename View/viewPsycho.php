@@ -8,10 +8,15 @@
   <body>
     <div id="elt">
 		 <div id= "morgue">
-			  <p>Psycho</p>
-			  <div id="ua"><p>UA</p></div>
-			  <div  id="ur"><p>UR</p></div>
-			  <div id="psycho"><p>Morgue</p></div>
+			  <p id="titre">Psycho</p>
+        <!--bouton pour aller à la page UR-->
+        <form action="viewUR.php" method="POST">
+        <input type="submit" value="UR" class="btn_UR"/>
+        </form>
+        <!-- bouton pour aller à la page Psycho-->
+			  <form action="viewUA.php" method="POST">
+        <input type="submit" value="UA" class="btn_Psy"/>
+        </form>
 			  <div id="tableau">
 				      <div id="icon-humain-1"></div><!--emplacement des bonhommes -->
 				      <div id="icon-humain-2"></div>

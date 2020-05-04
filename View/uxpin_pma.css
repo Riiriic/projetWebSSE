@@ -15,6 +15,10 @@
       right:26%;
       margin-top:40px;
    }
+
+ #titre{
+   font: 20px Arial;
+ }
 p
  {
    text-align:center;
@@ -90,7 +94,7 @@ p
         width: 80px;
         height: 90px;
         position:absolute;
-        left:110px; 
+        left:110px;
         top:3px;
       }
 #carre-2
@@ -141,7 +145,7 @@ p
       border-radius:10px;
       position:absolute;
       bottom:5px;
-      
+
     }
 #ra-adio
   {
@@ -153,7 +157,7 @@ p
     bottom:0px;
     right:12px;
   }
- 
+
 #pied-page
   {
     background-color:#c1bdba;
@@ -164,3 +168,27 @@ p
     right:7.5%;
   }
 
+.btn_UR
+{
+  background-color:#0066A2;
+  border-color: #0066A2;
+  width:70px;
+  height:70px;
+  color:#fff;
+  position:absolute;
+  left:5%;
+  font: 15px Arial;
+}
+
+.btn_Psy
+{
+  background-color:#0066A2;
+  border-color: #0066A2;
+  width:70px;
+  height:70px;
+  color:#fff;
+  position:absolute;
+  left:5%;
+  font: 15px Arial;
+  top: 150px;
+}
