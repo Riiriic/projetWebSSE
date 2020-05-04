@@ -23,35 +23,7 @@ p
  {
    text-align:center;
  }
-#ua
-  {
-     background-color:#000;
-     width:4em;
-     height:3em;
-     color:#fff;
-     position:absolute;
-     left:30px;
-  }
-#ur
-  {
-     background-color:#000;
-     width:4em;
-     height:3em;
-     color:#fff;
-     position:absolute;
-     left:30px;
-     bottom:325px;
-  }
-#psycho
-  {
-     background-color:#000;
-     width:4em;
-     height:3em;
-     color:#fff;
-     position:absolute;
-     left:30px;
-     bottom:270px;
-  }
+
 #tableau
      {
       background-color:#c1bdba;;
@@ -69,6 +41,20 @@ p
         width: 80px;
         height: 90px;
         margin-top:3px;
+        margin-left: 10px;
+        position: absolute;
+      }
+
+#myProgress {
+        width: 100%;
+        background-color: grey;
+        margin-top: 75%;
+      }
+
+#myBar {
+        width: 1%;
+        height: 30px;
+        background-color: green;
       }
 #icon-humain-2
       {
@@ -78,6 +64,7 @@ p
         height: 90px;
         position:absolute;
         bottom:140px;
+        margin-left: 10px;
       }
 #icon-humain-3
       {
@@ -87,6 +74,7 @@ p
         height: 90px;
         position:absolute;
         bottom:20px;
+        margin-left: 10px;
       }
 #carre-1
       {
@@ -94,7 +82,7 @@ p
         width: 80px;
         height: 90px;
         position:absolute;
-        left:110px;
+        margin-left: 110px;
         top:3px;
       }
 #carre-2
@@ -104,7 +92,7 @@ p
         width: 80px;
         height: 90px;
         position:absolute;
-        left:110px;
+        margin-left: 110px;
         bottom:140px;
       }
 
@@ -115,7 +103,7 @@ p
         width: 80px;
         height: 90px;
         position:absolute;
-        left:110px;
+        margin-left: 110px;
         bottom:20px;
       }
 #action
