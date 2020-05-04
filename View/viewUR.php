@@ -9,7 +9,7 @@
   <div id="elt">
 		 <div id= "morgue">
 			  <p id="titre">UR</p>
-        <!--bouton pour aller à la page UR-->
+        <!--bouton pour aller à la page UA-->
         <form action="viewUA.php" method="POST">
         <input type="submit" value="UA" class="btn_UR"/>
         </form>

@@ -13,7 +13,7 @@
         <form action="viewUR.php" method="POST">
         <input type="submit" value="UR" class="btn_UR"/>
         </form>
-        <!-- bouton pour aller à la page Psycho-->
+        <!-- bouton pour aller à la page UA-->
 			  <form action="viewUA.php" method="POST">
         <input type="submit" value="UA" class="btn_Psy"/>
         </form>
